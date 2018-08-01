@@ -15,7 +15,7 @@ export class SequenceBetaComponent implements OnInit {
     this.numbers = [];
     this.numbers.push(Math.floor(Math.random() * 15));
     this.numbers.push(Math.floor(Math.random() * 15));
+    //SharedDataService
     return this.numbers;
-  }
-
+  };
 }

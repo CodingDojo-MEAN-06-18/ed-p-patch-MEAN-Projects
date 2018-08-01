@@ -1,0 +1,11 @@
+.wrapper {
+    border: 2px solid black;
+    text-align: center;
+    width: 700px;
+
+}
+.location {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
