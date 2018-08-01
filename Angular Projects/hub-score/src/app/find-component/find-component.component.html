@@ -1,0 +1,25 @@
+<div class="half">
+  <h1>GitHub Score</h1>
+  
+  <form #inputField='ngForm'>
+  
+    <label>Github Username : <input type="text" placeholder="github_username" [(ngModel)]='user' required></label>
+    
+    <button [hidden]='inputField.invalid' 
+      (click)='goGetem($event, inputField)'>
+      Calculate this user's Github Score
+    </button>
+  
+  </form>
+
+</div>
+
+<div class="half">
+  <h1>User Score for {{user}}: {{user_score}}</h1>
+  
+  <p *ngIf='user_score >= 200'>Github Elite</p>
+  <p *ngIf='user_score < 200 && user_score > 100'>Great Job</p>
+  <p *ngIf='user_score < 100 && user_score > 50'>Doing Good</p>
+  <p *ngIf='user_score < 50 && user_score > 20'>A Decent Start</p>
+  <p *ngIf='user_score < 20'>Needs Work</p>
+</div>
